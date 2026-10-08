@@ -1,1 +1,0 @@
-# rudn-rag-homeworks

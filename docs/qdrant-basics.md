@@ -6,10 +6,6 @@
   </picture>
 </p>
 
-<p align="center">
-    <b>Основы Qdrant</b>
-</p>
-
 **Qdrant** — это высокопроизводительная векторная база данных с открытым исходным кодом, написанная на языке **Rust**. Она разработана для хранения, индексирования и поиска высокомерных векторов (эмбеддингов), которые генерируются моделями машинного обучения и нейросетями.
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/File%20Cabinet.png" alt="File Cabinet" width="25" height="25" /> Архитектура данных в Qdrant
@@ -50,13 +46,13 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, VectorParams, PointStruct
 ```
 
-### 1. Инициализация клиента (в памяти для тестирования)
+### 1. Инициализация клиента (в памяти)
 
 ```python
 client = QdrantClient(":memory:")
 ```
 
-### 2. Создание коллекции под векторы размерностью 4
+### 2. Создание коллекции под векторы
 
 ```python
 client.create_collection(
@@ -85,7 +81,7 @@ client.upsert(
 )
 ```
 
-### 4. Поиск ближайшего соседа с применением фильтра по цене
+### 4. Поиск ближайшего соседа
 
 ```python
 search_result = client.query_points(

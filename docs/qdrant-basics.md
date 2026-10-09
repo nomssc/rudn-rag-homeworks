@@ -7,12 +7,12 @@
 </p>
 
 <p align="center">
-    <b>Qdrant Basics</b>
+    <b>Основы Qdrant</b>
 </p>
 
 **Qdrant** — это высокопроизводительная векторная база данных с открытым исходным кодом, написанная на языке **Rust**. Она разработана для хранения, индексирования и поиска высокомерных векторов (эмбеддингов), которые генерируются моделями машинного обучения и нейросетями.
 
-## Архитектура данных в Qdrant
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/File%20Cabinet.png" alt="File Cabinet" width="25" height="25" /> Архитектура данных в Qdrant
 
 Векторные базы данных организованы иначе, чем традиционные реляционные (SQL) или документные (NoSQL) БД. Архитектура Qdrant состоит из четырех ключевых уровней:
 
@@ -22,7 +22,7 @@
   * **Вектор (Vector):** Массив чисел с плавающей точкой (например, `[0.15, -0.42, 0.89]`), отражающий семантический смысл объекта.
   * **Полезная нагрузка (Payload):** Обычный JSON-объект с метаданными (например, название товара, бренд, цена, теги).
 
-## Как работает векторный поиск
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Eyes.png" alt="Eyes" width="25" height="25" /> Как работает векторный поиск
 
 Когда пользователь отправляет запрос (текст или изображение), система работает по следующему алгоритму:
 
@@ -33,14 +33,14 @@
    * **Dot Product (Скалярное произведение):** Быстро вычисляется, подходит для нормализованных векторов.
    * **Euclidean (Евклидово расстояние):** Оценивает физическое расстояние между точками.
 
-## Фильтрация по метаданным (Payload Filtering)
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Magnifying%20Glass%20Tilted%20Left.png" alt="Magnifying Glass Tilted Left" width="25" height="25" /> Фильтрация по метаданным (Payload Filtering)
 
 Qdrant поддерживает **одноэтапный гибридный поиск** (Single-stage filtering). Это значит, что фильтрация по обычным свойствам (например, по цене или категории) происходит одновременно с обходом векторного графа (`HNSW`). 
 
 * **Как было раньше (двухэтапный подход):** База данных сначала находила топ-100 похожих векторов, а потом отсекала лишнее по цене. Если в топ-100 не попадало товаров нужной стоимости, пользователь получал пустой экран.
 * **Как делает Qdrant:** Фильтр применяется "на лету". Поиск по графу идет только среди тех точек, которые изначально соответствуют условию `цена < 50000`.
 
-## Быстрый старт на Python
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" alt="Snake" width="25" height="25" /> Быстрый старт на Python
 
 Для запуска примера установите библиотеку: `pip install qdrant-client`. 
 Код ниже демонстрирует создание коллекции в оперативной памяти (без развертывания сервера), добавление данных и поиск с фильтром.
@@ -102,7 +102,7 @@ search_result = client.query_points(
 print(search_result)
 ```
 
-## Дополнительные источники
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Blue%20Book.png" alt="Blue Book" width="25" height="25" /> Дополнительные источники
 
 Здесь собраны ссылки на плейлисты и оффициальные страницы документации.
 

@@ -1,4 +1,14 @@
-# 📄 Qdrant Basics
+<p align="center">
+  <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/qdrant/qdrant/raw/master/docs/logo-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://github.com/qdrant/qdrant/raw/master/docs/logo-light.svg">
+      <img height="100" alt="Qdrant" src="https://github.com/qdrant/qdrant/raw/master/docs/logo.svg">
+  </picture>
+</p>
+
+<p align="center">
+    <b>Qdrant Basics</b>
+</p>
 
 **Qdrant** — это высокопроизводительная векторная база данных с открытым исходным кодом, написанная на языке **Rust**. Она разработана для хранения, индексирования и поиска высокомерных векторов (эмбеддингов), которые генерируются моделями машинного обучения и нейросетями.
 
@@ -105,7 +115,7 @@ print(search_result)
 * **Курс с русской аудиодорожкой**  
   [Видео на YouTube](https://youtu.be) — аналогичный базовый материал, но доступный с озвучкой на русском языке. Здесь также на первых этапах рекомендуется ознакомиться исключительно с интро-частью.
 
-## Официальная документация и репозитории
+### Официальная документация и репозитории
 
 Документация — это главный и самый актуальный источник информации по любой технологии.
 
